@@ -4,41 +4,35 @@ import FadeIn from '../animations/FadeIn'
 
 export default function Workflow() {
   return (
-    <section id="workflow" className="max-w-5xl mx-auto px-5 lg:px-8 py-24">
-      <FadeIn className="text-center mb-16">
-        <span className="text-xs font-semibold uppercase tracking-widest text-primary-600">How it works</span>
-        <h2 className="font-display font-bold text-3xl md:text-4xl mt-2">From field to best mandi</h2>
-        <p className="text-slate-500 mt-3 max-w-xl mx-auto">
-          Every analysis moves through the same transparent pipeline — real data in, a ranked decision out.
-        </p>
-      </FadeIn>
+    <section id="how-it-works" className="scroll-mt-24 border-y border-slate-200/70 bg-canvas-soil/55 py-20 dark:border-white/10 dark:bg-moss-900/40 lg:py-24">
+      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+        <FadeIn className="mb-12 grid gap-4 md:grid-cols-[0.8fr_1fr] md:items-end">
+          <div>
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-primary-700 dark:text-primary-300">How it works</span>
+            <h2 className="mt-3 max-w-lg font-display text-3xl font-semibold tracking-tight sm:text-4xl">A thoughtful way to compare your options</h2>
+          </div>
+          <p className="max-w-xl leading-7 text-slate-600 dark:text-slate-300 md:justify-self-end">
+            Add a few details about your crop. HarvestIQ brings the pieces together into a simple side-by-side view you can use as a starting point.
+          </p>
+        </FadeIn>
 
-      <div className="relative pl-10">
-        <div className="absolute left-[15px] top-2 bottom-2 w-px bg-gradient-to-b from-primary-500 via-secondary-500 to-accent-500" />
-        {WORKFLOW_STEPS.map((step, i) => (
-          <motion.div
-            key={step.title}
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.45, delay: i * 0.05 }}
-            className="relative mb-10 last:mb-0"
-          >
-            <motion.span
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.05 + 0.1, type: 'spring', stiffness: 260, damping: 18 }}
-              className="absolute -left-10 top-0 h-8 w-8 rounded-full bg-white dark:bg-moss-900 border-2 border-primary-500 flex items-center justify-center text-[11px] font-bold text-primary-600 font-mono-num"
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {WORKFLOW_STEPS.slice(0, 4).map((step, i) => (
+            <motion.div
+              key={step.title}
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.4, delay: i * 0.06 }}
+              className="rounded-2xl border border-slate-200/80 bg-white/80 p-5 dark:border-white/10 dark:bg-moss-900/60"
             >
-              {i + 1}
-            </motion.span>
-            <div className="glass-card px-6 py-4">
-              <h3 className="font-display font-semibold">{step.title}</h3>
-              <p className="text-sm text-slate-500 mt-1">{step.desc}</p>
-            </div>
-          </motion.div>
-        ))}
+              <span className="font-mono-num text-xs font-semibold text-primary-700 dark:text-primary-300">0{i + 1}</span>
+              <h3 className="mt-4 font-display font-semibold">{step.title}</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">{step.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+        <p className="mt-5 text-xs text-slate-500 dark:text-slate-400">Demo only: recommendations are illustrative, not financial or agricultural advice.</p>
       </div>
     </section>
   )

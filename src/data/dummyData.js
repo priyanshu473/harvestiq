@@ -47,43 +47,40 @@ export const DASHBOARD_ACTIVITY = [
 
 export const FEATURES = [
   {
-    title: 'Live Mandi Prices',
-    desc: 'Real-time price feeds aggregated across 500+ mandis, refreshed every hour.',
+    title: 'Market price comparison',
+    desc: 'Explore illustrative prices across a selection of mandis and see how markets compare.',
     icon: 'TrendingUp',
   },
   {
-    title: 'Weather Forecast',
-    desc: '7-day hyperlocal forecasts with spoilage & harvest-risk scoring built in.',
+    title: 'Weather context',
+    desc: 'Consider a sample local forecast and harvest risks as part of your planning.',
     icon: 'CloudSun',
   },
   {
-    title: 'AI Prediction',
-    desc: 'Ensemble models trained on a decade of mandi data predict tomorrow\'s best price.',
-    icon: 'BrainCircuit',
+    title: 'A practical recommendation',
+    desc: 'See a demo suggestion that brings your crop, quantity and market options together.',
+    icon: 'Lightbulb',
   },
   {
-    title: 'Cold Storage',
-    desc: 'Find nearby storage capacity, daily rates and spoilage-safe holding windows.',
+    title: 'Storage options',
+    desc: 'Keep sample storage rates and holding windows alongside your market choices.',
     icon: 'Warehouse',
   },
   {
-    title: 'Transport Optimization',
-    desc: 'Route and vehicle-type suggestions that minimise per-quintal transit cost.',
+    title: 'Transport costs',
+    desc: 'Compare estimated travel costs to get a clearer picture of your possible net return.',
     icon: 'Truck',
   },
   {
-    title: 'Profit Calculator',
-    desc: 'One tap to compare net profit across every reachable mandi, ranked instantly.',
-    icon: 'Calculator',
+    title: 'Side-by-side view',
+    desc: 'Review the factors behind a suggestion in one straightforward place.',
+    icon: 'ListChecks',
   },
 ]
 
 export const WORKFLOW_STEPS = [
-  { title: 'Farmer Enters Crop', desc: 'Tell us crop, quantity, quality & location.' },
-  { title: 'Government APIs', desc: 'Pulling live Agmarknet & eNAM price feeds.' },
-  { title: 'Weather APIs', desc: 'Cross-checking 7-day forecast for your district.' },
-  { title: 'Cold Storage APIs', desc: 'Scanning nearby storage capacity & rates.' },
-  { title: 'AI Prediction', desc: 'Ensemble model scores every reachable mandi.' },
-  { title: 'Profit Analysis', desc: 'Net profit computed after transport & storage.' },
-  { title: 'Recommendation', desc: 'Best mandi & sell-window delivered to you.' },
+  { title: 'Tell us about your crop', desc: 'Choose a crop, quantity, quality and your location.' },
+  { title: 'Compare market options', desc: 'Review sample mandi prices and estimated transport costs.' },
+  { title: 'Consider the context', desc: 'See illustrative weather and storage details together.' },
+  { title: 'Review a suggestion', desc: 'Use the comparison as a starting point for your own decision.' },
 ]
